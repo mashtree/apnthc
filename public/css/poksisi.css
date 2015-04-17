@@ -1,0 +1,516 @@
+@font-face{
+	font-family:'lato-bold';
+	src:url("fonts/lato/Lato-Bold.ttf") format("truetype");
+	font-weight:normal;font-style:normal
+}
+
+@font-face{
+	font-family:'lato-regular';
+	
+	src:url("fonts/lato/Lato-Regular.ttf") format("truetype");
+		font-weight:normal;
+		font-style:normal
+}
+
+@font-face{
+	font-family:'lato-thin';
+	
+	src:url("fonts/lato/Lato-Thin.ttf") format("truetype");
+		font-weight:normal;
+		font-style:normal
+}
+
+@font-face {
+    font-family: 'si';
+    src: url('fonts/socicon/socicon.eot');
+    src: url('fonts/socicon/socicon.eot?#iefix') format('embedded-opentype'),
+         url('fonts/socicon/socicon.woff') format('woff'),
+         url('fonts/socicon/socicon.ttf') format('truetype'),
+         url('fonts/socicon/socicon.svg#icomoonregular') format('svg');
+    	font-weight: normal;
+    	font-style: normal;
+ 
+}
+
+@font-face{
+	font-family:'gooddog';
+	
+	src:url("fonts/gooddog/GoodDog.otf") format("truetype");
+		font-weight:normal;
+		font-style:normal
+}
+
+@font-face{
+	font-family:'pacifico';
+	
+	src:url("fonts/pacifico/Pacifico.ttf") format("truetype");
+		font-weight:normal;
+		font-style:normal
+}
+
+*{
+	margin: 0 auto;
+}
+
+body{
+	font-family: 'lato-thin','lato-regular','gooddog','Arial';
+}
+
+table {
+	width: 100%;
+}
+
+table tr td{
+	text-align: center;
+}
+
+table tr td .text-left{
+	text-align: left;
+}
+table tr td .fail{
+	background-color: red;
+	color: #fff;
+}
+
+table tr td .pass{
+	background-color: green !important;
+	color: #fff;	
+}
+
+/*
+*
+* font-size
+*
+*/
+
+.size-12 { font-size: 12px; }
+
+.size-14 { font-size: 14px; }
+
+.size-16 { font-size: 16px; }
+
+.size-18 { font-size: 18px; }
+
+.size-21 { font-size: 21px; }
+
+.size-24 { font-size: 24px; }
+
+.size-36 { font-size: 36px; }
+
+.size-48 { font-size: 48px; }
+
+.size-60 { font-size: 60px; }
+
+.size-72 { font-size: 72px; }
+
+.menu{
+	height: 60px;
+	background-color: #1DD2AF;
+	text-align: center;
+	font-size: 1.5em;
+	color: #2C3E50;
+	margin-top: 0px;
+	font-family: 'Lato-Thin';
+	position: inherit;
+}
+
+.left{
+	float: left;
+}
+
+.right{
+	float: right;
+}
+
+.menu ul li{
+	display: inline-block;
+	padding-top: 7px;
+	font-size: 1.5em;
+	color: #2C3E50;
+	width: 150px;
+	height: 60px;
+	cursor: pointer;
+}
+
+.menu ul li:hover{
+	font-family: 'Lato-Regular';
+	width: 170px;
+	color:#FFFFFF;
+	background-color: #1abc9c;
+}
+
+.menu .user{
+	margin-top:-23px;
+	font-size: 24px;
+}
+
+.side-menu{
+	background-color:#FFFFFF;
+	min-height: 100%;
+}
+
+/*
+* login
+*/
+
+.login-container {
+  font: 13px/20px "Lucida Grande", Tahoma, Verdana, sans-serif;
+  background: #0ca3d2;
+  height: 100%;
+}
+
+.login{
+	position:relative;
+	border:5px solid #F7F7F7;
+	border-radius: 5px;
+	padding : 10px 10px 10px 10px;
+	margin: 35% 0 20% 0;
+	background-color: #FFFFFF;
+}
+
+.login h3{
+	text-align: center;
+	border-bottom: 1px solid #F7F7F7;
+}
+
+.login .login-help{
+	margin:0 auto;
+}
+
+/*
+*
+* user
+*/
+
+.user {
+	position: absolute;
+	background-color: #1DD2AF;
+	border: 4px solid #E5E5E5;
+	width: 200px;
+	height: 160px;
+	right: 0px;
+	top:90px;
+	z-index: 999;
+}
+
+.user:after, .user:before {
+	bottom: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.user:after {
+	border-color: rgba(136, 183, 213, 0);
+	border-bottom-color: #1DD2AF;
+	border-width: 10px;
+	margin-left: -10px;
+}
+.user:before {
+	border-color: rgba(194, 225, 245, 0);
+	border-bottom-color: #E5E5E5;
+	border-width: 16px;
+	margin-left: -16px;
+}
+
+.user .info{
+	height: 110px;
+	font-family: 'lato-regular';
+	font-size: .6em;
+	text-align: justify;
+	padding: 5px 10px 5px 10px;
+	
+	color: #FFFFFF;
+}
+
+.user .logout{
+	border-top: 1px solid #F7F7F7;
+	height: 50px;
+	padding-right: 10px;
+	padding-top: 4px;
+	padding-bottom: 2px;
+}
+
+/*
+* referensi
+*============== MENU =============
+*/
+
+.menu-ref{
+	text-align: center;
+	margin: 15% 0 15% 0 ;
+	background-color: #F7F7F7;
+}
+
+.menu-admin{
+	text-align: center;
+	margin: 0 auto;
+	background-color: #000000;
+	height: 80px;
+	padding: 0 auto;
+}
+
+.list{
+	margin-top: 20px;
+	
+}
+
+.list h3{
+	text-align: center;
+	font-family: 'gooddog';
+}
+
+.list label,input[type='text'],textarea,table,tr,td, p{
+	color:#2C3E50;
+	font-family: 'lato-regular';
+	font-size: 1em;
+}
+
+.list table{
+	width: 100%;
+}
+
+.list th{
+	text-align: center;
+}
+
+.inline{
+	display: inline-block;
+}
+
+.hapus {
+	font-family: 'lato-regular';
+	color: red;
+}
+
+.no-data{
+	text-align: center;
+	font-family: 'lato-regular';
+	font-size: 1.5em;
+	font-weight: bold;
+	padding: 10px 0 10px 0;
+}
+
+/*
+* warning
+*/
+
+.warning{
+	width: 100%;
+	height: 40px;
+	font-size: 1.5em;
+	text-align: center;
+	color:#FFFFFF;
+	margin: 2px 0 5px 0;
+}
+
+.success{
+	background-color: #27ae60;
+}
+
+.error{
+	background-color: #e74c3c;
+}
+
+/*
+* laporan
+*/
+
+.hide{
+	display: none;
+}
+
+.lap  {
+	border: 1px solid black;
+}
+
+/*
+* footer
+*/
+
+.footer{
+	margin-top: 50px;
+    position: relative;
+    bottom: 0px;
+    left: 0px;
+    line-height: 50px;
+    color: #aaa;
+    text-align: center;
+    width: 100%;
+	bottom: 0;
+	background-color: #95a5a6;
+	height: 40px;
+}
+
+.footer ul li{
+	font-size: 1em;
+	font-family: 'lato-regular';
+	color:#2c3e50;
+	display: inline-block;
+	padding-top: 7px;
+	margin-left: 10px;
+}
+
+.top{
+	width: 150px;
+	height: 50px;
+	text-align: right;
+	margin-top: -80px;
+	cursor: pointer;
+	padding-left: 12px;
+	bottom: 5px;
+	right: 10px;
+	position: fixed;
+	z-index: 99;
+	
+}
+
+.top span{
+	font-weight: bold;
+}
+
+.top a{
+	color:red;
+}
+
+.top a:hover{
+	color:cyan;
+}
+
+/*******************************Calendar Top Navigation*********************************/
+div#calendar{
+  margin:0px auto;
+  padding:0px;
+  width: 100%;
+  font-family:'Lato-Regular',Helvetica, "Times New Roman", Times, serif;
+}
+ 
+div#calendar div.box{
+	margin-top: 10px;
+    position:relative;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:40px;
+    background-color:   #F1F1F1 ;     
+}
+ 
+div#calendar div.header{
+    line-height:40px;  
+    vertical-align:middle;
+    position:absolute;
+    left:11px;
+    top:0px;
+    width:98%;
+    height:40px;   
+    text-align:center;
+}
+ 
+div#calendar div.header a.prev,div#calendar div.header a.next{ 
+    position:absolute;
+    top:0px;   
+    height: 17px;
+    display:block;
+    cursor:pointer;
+    text-decoration:none;
+    color:#000;
+}
+ 
+div#calendar div.header span.title{
+    color:#000;
+    font-size:18px;
+}
+ 
+ 
+div#calendar div.header a.prev{
+    left:0px;
+}
+ 
+div#calendar div.header a.next{
+    right:0px;
+}
+ 
+ 
+ 
+ 
+/*******************************Calendar Content Cells*********************************/
+div#calendar div.box-content{
+    border:1px solid #F1F1F1 ;
+    border-top:none;
+}
+ 
+ 
+ 
+div#calendar ul.label{
+    float:left;
+    margin: 0px;
+    padding: 0px;
+    margin-top:5px;
+    margin-left: 5px;
+    width: 99%;
+    background-color: #fff;
+}
+ 
+div#calendar ul.label li{
+    margin:0px;
+    padding:0px;
+    margin-right:0px;  
+    float:left;
+    list-style-type:none;
+    width:14.28%;
+    height:40px;
+    line-height:40px;
+    vertical-align:middle;
+    text-align:center;
+    color:#000;
+    font-size: 15px;
+    background-color: none;
+}
+ 
+ 
+div#calendar ul.dates{
+    float:left;
+    margin: 0px;
+    padding: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    width: 100%;
+}
+ 
+/** overall width = width+padding-right**/
+div#calendar ul.dates li{
+    margin:0px;
+    padding:0px;
+    padding-left: 5px;
+    margin-right:0px;
+    margin-top: 0px;
+    /*line-height:80px;*/
+    vertical-align:middle;
+    float:left;
+    list-style-type:none;
+    width:14.28%;
+    height:80px;
+    font-size:0.8em;
+    background-color: #fff;
+    color:#000;
+    /*text-align:center;*/
+    border: 1px solid #DFDFDF; 
+}
+
+div#calendar ul.dates li:hover{
+	background-color: #DC4B39;
+    color:#fff;
+    cursor: pointer;
+}
+ 
+:focus{
+    outline:none;
+}
+ 
+div.clear{
+    clear:both;
+}

@@ -1,0 +1,11 @@
+TODO ::
+APLIKASI PENGHITUNG NILAI TES HC
+- sorting data laporan:dengan membuat data array lengkap terlebih dahulu
+- halaman peserta assesment:peserta yg telah mengikuti assesment {peserta, assesment, status lulus, unit pada saat assesment}
+- menambahkan informasi unit pada saat assesment di rekam peserta assesment
+
+KALENDAR
+- menampilkan st di kalender
+- pop up data kalender {st->link_st}
+- menampilkan matrik tanggal dan pegawai dalam kegiatan
+- validasi pegawai tidak bisa diinput > 1 untuk st yang sama
