@@ -59,11 +59,17 @@ class WekdalController extends BaseController{
 				$task->add($data);
 				$id = $task->last_insert_id();
 				$p = new PesertaTask($this->registry);
+				$array = 0;
 				foreach ($peserta as $key => $value) {
+					$t_mulai = ($_POST['pmulai'][$array]=='')?$mulai:$_POST['pmulai'][$array];
+					$t_akhir = ($_POST['pakhir'][$array]=='')?$akhir:$_POST['pakhir'][$array];
 					$data = array('id_pegawai'=>$value,
-								'id_task'=>$id
+								'id_task'=>$id,
+								'tgl_mulai'=>$t_mulai,
+								'tgl_selesai'=>$t_akhir
 								);
 					$p->add($data);
+					$array++;
 				}
 				$this->view->add_success('success','rekam data task/kegiatan berhasil!');
 			}
@@ -75,8 +81,20 @@ class WekdalController extends BaseController{
 	/*
 	* daftar pegawai dan jadwal satu bulan, per tanggal
 	*/
-	public function list_pegawai($bulan){
+	public function pegawai($bulan=null){
+		if(is_null($bulan)) $bulan = date('Y-m');
+		$peserta = new PesertaTask($this->registry); 
+		$data = $peserta->get_peserta_bulan($bulan); var_dump($data);
 		$this->view->aksi = 'list_pegawai';
+		$this->view->render('wekdal/kalendar');
+	}
+
+	/*
+	* daftar kegiatan
+	*/
+	public function kegiatan($bulan=null){
+		if(is_null($bulan)) $bulan = date('Y-m');
+		$this->view->aksi = 'list_kegiatan';
 		$this->view->render('wekdal/kalendar');
 	}
 	

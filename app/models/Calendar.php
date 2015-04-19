@@ -54,7 +54,7 @@ class Calendar {
          
         }
 
-        $this->data = $this->task->get_task($month); var_dump($this->data);                  
+        $this->data = $this->task->get_task($month); //var_dump($this->data);                  
          
         $this->currentYear=$year;
          

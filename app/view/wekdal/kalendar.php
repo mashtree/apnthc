@@ -1,7 +1,7 @@
 <div class="units-row">
 <div class="units-row">
 <div class="large-2 columns">
-	<?php $this->load('admin/menu-admin');?>
+	<?php $this->load('wekdal/menu-wekdal');?>
 </div>
 <?php if($this->aksi=='kalendar'){ ?>
 <!-- calendar -->
@@ -115,13 +115,24 @@
 		<div class="large-5 columns list end">
 			<label>PESERTA</label>
 			<div class="input_fields_wrap">
-		    <div><select name="peserta[]"><option value=0>--PILIH PESERTA--</option>
+		    <div><select name="peserta[]"><option value=0>--PILIH PESERTA 1--</option>
 		    	<?php 
 		    		foreach ($this->pegawai as $key => $value) {
 		    			echo "<option value=".$value['id'].">".$value['nama']." ".$value['nip']."</option>";
 		    		}
 		    	?>
-		    </select></div>
+		    </select>
+		    <div class="row" >
+			<div class="large-6 columns" style="padding-left:0">
+			<label for="mulai">MULAI</label>
+			<input class="" id="d1" type="text" name="pmulai[]" placeholder='yyyy-mm-dd'>
+			</div>
+			<div class="large-6 columns" style="padding-right:0">
+			<label for="akhir">AKHIR</label>
+			<input class="" id="d2" type="text" name="pakhir[]" placeholder='yyyy-mm-dd'>
+			</div>
+			</div>
+		    </div>
 			</div>
 			<button class="add_field_button" title="tambah kolom lagiii...">+</button>
 		</div>

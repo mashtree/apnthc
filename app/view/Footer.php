@@ -11,3 +11,6 @@
 </div><!-- end of footer -->	
 </body>
 </html>
+
+	<script type="text/javascript" src="<?php echo URL;?>public/js/foundation/foundation.datepicker.js"></script>
+	<script type="text/javascript" src="<?php echo URL;?>public/js/poksisi.js"></script>

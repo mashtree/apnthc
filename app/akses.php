@@ -54,6 +54,8 @@ $akses['Wekdal'] = array(
     '__construct',
     'home',
     'add_task',
+    'pegawai',
+    'kegiatan',
     '__destruct'
     );
 

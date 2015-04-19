@@ -123,6 +123,7 @@ table tr td .pass{
 }
 
 .menu ul li{
+	font-family: 'Lato-Regular';
 	display: inline-block;
 	padding-top: 7px;
 	font-size: 1.5em;
@@ -133,9 +134,8 @@ table tr td .pass{
 }
 
 .menu ul li:hover{
-	font-family: 'Lato-Regular';
-	width: 170px;
 	color:#FFFFFF;
+	border-left: 2px solid #fff;
 	background-color: #1abc9c;
 }
 

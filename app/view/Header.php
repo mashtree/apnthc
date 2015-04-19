@@ -18,8 +18,6 @@
 	<script type="text/javascript" src="<?php echo URL;?>public/js/foundation.min.js"></script>
 	<script type="text/javascript" src="<?php echo URL;?>public/js/datatables.js"></script>
 	<script type="text/javascript" src="<?php echo URL;?>public/js/foundation/foundation.datatables.js"></script>
-	<script type="text/javascript" src="<?php echo URL;?>public/js/foundation/foundation.datepicker.js"></script>
-	<script type="text/javascript" src="<?php echo URL;?>public/js/poksisi.js"></script>
 </head>
 <body>
 <!-- menu atas -->
@@ -30,7 +28,7 @@
 			<a href="<?php echo URL; ?>assesment/"><li>Assesment</li></a>
 			<?php if(Session::get('role')==PLATINUM){ ?>
 			<a href='<?php echo URL; ?>referensi/'><li>Referensi</li></a>
-			<a href='<?php echo URL; ?>wekdal/home'><li title="manajere jadwal">Wekdal v.0.1a</li></a>
+			<a href='<?php echo URL; ?>wekdal/home'><li title="manajere jadwal">Wekdal</li></a>
 			<?php } ?>
 			<li class="right" id="user"><?php echo Session::get('user'); ?></li>
 			<div class='user' style="display:none" id="cuser">

@@ -8,16 +8,28 @@ $(document).ready(function() {
     var w_korektor      = $(".input_fields_korektor"); //Fields wrapper
     var add_button      = $(".add_field_button"); //Add button ID
     var add_b_korektor  = $(".add_field_button_korektor"); //Add button ID
-
+    var num_peserta = 2;
     $(add_button).click(function(e){ //on add input button click
         e.preventDefault();
         $.getJSON('http://localhost/poksisi/assesment/get_pegawai', function(data) {
-            var option = '<option value=0>--PILIH PESERTA--</option>';
+            var option = '<option value=0>--PILIH PESERTA '+num_peserta+'--</option>';
             for (var i = data.length - 1; i >= 0; i--) {
                 option += '<option value='+data[i].id+'>'+data[i].nama+' '+data[i].nip+'</option>';
             };
 
-            $(wrapper).append('<div><select name="peserta[]">'+option+'</select><a href="#" class="hapus">Hapus kolom atas ane!</a></div>');
+            var periode = '<div class="row" >\
+            <div class="large-6 columns" style="padding-left:0">\
+            <label for="mulai">MULAI</label>\
+            <input class="datepick" id="d1" type="text" name="pmulai[]" placeholder="yyyy-mm-dd" >\
+            </div>\
+            <div class="large-6 columns" style="padding-right:0">\
+            <label for="akhir">AKHIR</label>\
+            <input class="datepick" id="d2" type="text" name="pakhir[]" placeholder="yyyy-mm-dd" >\
+            </div>\
+            </div>';
+
+            $(wrapper).append('<div><select name="peserta[]">'+option+'</select>'+periode+'<a href="#" class="hapus">Hapus kolom atas ane!</a></div>');
+            num_peserta++;
         });
     });
 
@@ -40,6 +52,11 @@ $(document).ready(function() {
     $(w_korektor).on("click",".hapus", function(e){ //user click on remove text
         e.preventDefault(); $(this).parent('div').remove(); 
     })
+
+    window.prettyPrint && prettyPrint();
+    $('.datepick').fdatepicker({
+        format: 'yyyy-mm-dd'
+    });
 });
 
 //]]>
